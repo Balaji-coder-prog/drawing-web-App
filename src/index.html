@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArtBoard – Draw Online</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1828/1828919.png" type="image/png">
+</head>
+<body>
+  <header>
+    <h1>✏️ ArtBoard - Express Your Ideas</h1>
+  </header>
+  <section class="drawing-board">
+    <div class="tools">
+      <ul class="options">
+        <li class="option tool active" id="brush" title="Brush"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828919.png" alt=""></li>
+        <li class="option tool" id="eraser" title="Eraser"><img src="https://cdn-icons-png.flaticon.com/128/484/484662.png" alt=""></li>
+        <li class="option tool" id="fill-color" title="Fill Color"><input type="checkbox"></li>
+        <li class="option tool" id="rectangle" title="Rectangle"><img src="https://cdn-icons-png.flaticon.com/128/32/32462.png" alt=""></li>
+        <li class="option tool" id="circle" title="Circle"><img src="https://cdn-icons-png.flaticon.com/128/32/32454.png" alt=""></li>
+        <li class="option tool" id="triangle" title="Triangle"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828843.png" alt=""></li>
+        <li class="option">
+          <input type="range" id="size-slider" min="1" max="30" value="5">
+        </li>
+      </ul>
+      <ul class="colors">
+        <li class="option selected" style="background-color: #000;"></li>
+        <li class="option" style="background-color: #E02020;"></li>
+        <li class="option" style="background-color: #6DD400;"></li>
+        <li class="option" style="background-color: #0091FF;"></li>
+        <li class="option">
+          <input type="color" id="color-picker">
+        </li>
+      </ul>
+
+      <!-- Add Image from Web -->
+      <input type="text" id="image-url" placeholder="Paste image URL here" />
+      <button id="load-image">
+        <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="Upload" />
+        Load Image
+      </button>
+
+      <div class="buttons">
+        <button id="clear-canvas">🗑️ Clear</button>
+        <button id="save-img">💾 Save</button>
+      </div>
+    </div>
+    <canvas></canvas>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
